@@ -2,13 +2,13 @@ region       = "us-east-1"
 project_name = "lab-ecs-cluster"
 
 ## Parametros SSM VPC
-ssm_private_subnet_1 = "/containers-vpc/vpc/subnet_private_1a"
-ssm_private_subnet_2 = "/containers-vpc/vpc/subnet_private_1b"
-ssm_private_subnet_3 = "/containers-vpc/vpc/subnet_private_1c"
+ssm_private_subnet_1 = "/containers-vpc/vpc/containers-vpc-private-subnet-1a"
+ssm_private_subnet_2 = "/containers-vpc/vpc/containers-vpc-private-subnet-1b"
+ssm_private_subnet_3 = "/containers-vpc/vpc/containers-vpc-private-subnet-1c"
 
-ssm_public_subnet_1 = "/containers-vpc/vpc/subnet_public_1a"
-ssm_public_subnet_2 = "/containers-vpc/vpc/subnet_public_1b"
-ssm_public_subnet_3 = "/containers-vpc/vpc/subnet_public_1c"
+ssm_public_subnet_1 = "/containers-vpc/vpc/containers-vpc-public-subnet-1a"
+ssm_public_subnet_2 = "/containers-vpc/vpc/containers-vpc-public-subnet-1b"
+ssm_public_subnet_3 = "/containers-vpc/vpc/containers-vpc-public-subnet-1c"
 
 ssm_vpc_id = "/containers-vpc/vpc/vpc_id"
 
