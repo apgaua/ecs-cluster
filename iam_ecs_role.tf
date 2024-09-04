@@ -18,9 +18,8 @@ resource "aws_iam_role_policy_attachment" "ec2_role" {
 }
 
 resource "aws_iam_role_policy_attachment" "ec2_ssm" {
+  role = aws_iam_role.iam_role.name
   policy_arn = "arn:aws:iam::aws:policy/service-role/AmazonEC2RoleforSSM"
-  role = "aws_iam_role.iam_role.name"
-  
 }
 
 resource "aws_iam_instance_profile" "iam_role" {
