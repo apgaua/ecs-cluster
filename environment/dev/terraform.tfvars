@@ -1,5 +1,5 @@
 region       = "us-east-1"
-project_name = "ecs-cluster"
+project_name = "lab-ecs-cluster"
 
 ## Parametros SSM VPC
 ssm_private_subnet_1 = "/containers-vpc/vpc/subnet_private_1a"
@@ -25,3 +25,7 @@ node_volume_type   = "gp3"
 cluster_ondemand_min     = 2
 cluster_ondemand_max     = 4
 cluster_ondemand_desired = 3
+
+cluster_spot_min     = 2
+cluster_spot_max     = 4
+cluster_spot_desired = 3

@@ -1,8 +1,15 @@
-resource "aws_launch_template" "on_demand" {
-  name_prefix            = format("%s-on-demand", var.project_name)
+resource "aws_launch_template" "spot" {
+  name_prefix            = format("%s-spot", var.project_name)
   image_id               = var.nodes_ami
   instance_type          = var.node_instance_type
   vpc_security_group_ids = [aws_security_group.main.id]
+
+  instance_market_options {
+    market_type = "spot"
+    spot_options {
+      max_price = "0.15"
+    }
+  }
 
   iam_instance_profile {
     name = aws_iam_instance_profile.ecs_node.name
@@ -20,7 +27,7 @@ resource "aws_launch_template" "on_demand" {
   tag_specifications {
     resource_type = "instance"
     tags = {
-      Name = format("%s-on-demand", var.project_name)
+      Name = format("%s-spot", var.project_name)
     }
   }
 

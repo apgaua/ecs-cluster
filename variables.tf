@@ -25,3 +25,9 @@ variable "cluster_ondemand_min" {}
 variable "cluster_ondemand_max" {}
 
 variable "cluster_ondemand_desired" {}
+
+variable "cluster_spot_min" {}
+
+variable "cluster_spot_max" {}
+
+variable "cluster_spot_desired" {}
