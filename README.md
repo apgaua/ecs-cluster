@@ -15,6 +15,9 @@ terraform destroy -auto-approve -var-file=environment/dev/terraform.tfvars
 Coleta de versão da ami na regiao us-east-1
 aws ssm get-parameters --names /aws/service/ecs/optimized-ami/amazon-linux-2/recommended --region us-east-1
 
+Gerar documentacao
+terraform-docs markdown table --output-file README.md --output-mode inject "$PWD"
+
 ## Requirements
 
 No requirements.
