@@ -6,7 +6,7 @@ resource "aws_launch_template" "on_demand" {
   vpc_security_group_ids = [aws_security_group.main.id]
 
   iam_instance_profile {
-    name = aws_iam_instance_profile.ecs_node.name
+    name = aws_iam_instance_profile.iam_role.name
   }
   update_default_version = true
 
@@ -46,7 +46,7 @@ resource "aws_launch_template" "spot" {
   }
 
   iam_instance_profile {
-    name = aws_iam_instance_profile.ecs_node.name
+    name = aws_iam_instance_profile.iam_role.name
   }
   update_default_version = true
 
