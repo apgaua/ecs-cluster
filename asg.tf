@@ -2,9 +2,9 @@
 resource "aws_autoscaling_group" "on_demand" {
   name_prefix = format("%s-on-demand", var.project_name)
   vpc_zone_identifier = [
-    data.aws_ssm_parameter.subnet_private_1.value,
-    data.aws_ssm_parameter.subnet_private_2.value,
-    data.aws_ssm_parameter.subnet_private_3.value,
+    data.aws_ssm_parameter.privsubnet_1a.value,
+    data.aws_ssm_parameter.privsubnet_1b.value,
+    data.aws_ssm_parameter.privsubnet_1c.value,
   ]
   #       enabled_metrics = true
   desired_capacity = var.cluster_ondemand_desired
@@ -49,9 +49,9 @@ resource "aws_ecs_capacity_provider" "on_demand" {
 resource "aws_autoscaling_group" "spot" {
   name_prefix = format("%s-spot", var.project_name)
   vpc_zone_identifier = [
-    data.aws_ssm_parameter.subnet_private_1.value,
-    data.aws_ssm_parameter.subnet_private_2.value,
-    data.aws_ssm_parameter.subnet_private_3.value,
+    data.aws_ssm_parameter.privsubnet_1a.value,
+    data.aws_ssm_parameter.privsubnet_1b.value,
+    data.aws_ssm_parameter.privsubnet_1c.value,
   ]
   #       enabled_metrics = true
   desired_capacity = var.cluster_spot_desired
