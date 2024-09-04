@@ -1,7 +1,9 @@
 <!-- BEGIN_TF_DOCS -->
 ## Requirements
 
-No requirements.
+Terraform
+Inframap
+Graphviz
 
 ## Commands
 
@@ -21,6 +23,12 @@ aws ssm get-parameters --names /aws/service/ecs/optimized-ami/amazon-linux-2/rec
 
 Gerar documentacao
 terraform-docs markdown table --output-file README.md --output-mode inject "$PWD"
+
+Diagrama
+inframap generate ./ --raw | dot -Tpng > diagrama.png
+
+## Estrutura
+![Estrutura terraform](diagrama.png)
 
 ## Providers
 
