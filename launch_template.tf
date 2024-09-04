@@ -3,6 +3,7 @@ resource "aws_launch_template" "on_demand" {
   image_id               = var.nodes_ami
   instance_type          = var.node_instance_type
   vpc_security_group_ids = [aws_security_group.main.id]
+  
   iam_instance_profile {
     name = aws_iam_instance_profile.ecs_node.name
   }
