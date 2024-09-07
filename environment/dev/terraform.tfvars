@@ -18,7 +18,7 @@ load_balancer_type     = "application"
 
 ## ECS
 nodes_ami          = "ami-0a5f593ecaa0f722d"
-node_instance_type = "t3a.micro"
+node_instance_type = "t4g.micro"
 node_volume_size   = "40"
 node_volume_type   = "gp3"
 
