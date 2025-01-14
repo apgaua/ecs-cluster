@@ -1,5 +1,5 @@
 region       = "us-east-1"
-project_name = "cluster-ecs"
+project_name = "ecs-cluster"
 
 ## Parametros SSM VPC
 privatesubnets = [
