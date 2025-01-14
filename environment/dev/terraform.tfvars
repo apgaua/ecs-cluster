@@ -1,7 +1,7 @@
 region       = "us-east-1"
 project_name = "ecs-cluster"
 
-## Parametros SSM VPC
+# ## Parametros SSM VPC
 privatesubnets = [
   "/ECS/subnets/private/us-east-1a/ecs-private-subnet-1a",
   "/ECS/subnets/private/us-east-1b/ecs-private-subnet-1b",
@@ -22,11 +22,16 @@ databasesubnets = [
 
 ssm_vpc_id = "/ECS/vpc/id"
 
-## LB
+##############################################################
+################## LOAD BALANCER VARIABLES ###################
+##############################################################
 load_balancer_internal = false
 load_balancer_type     = "application"
 
-## ECS
+
+##############################################################
+###################### ECS VARIABLES #########################
+##############################################################
 nodes_ami          = "ami-0735de0d7bfebab99"
 node_instance_type = "t4g.micro"
 node_volume_size   = "40"

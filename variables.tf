@@ -18,26 +18,58 @@ variable "databasesubnets" {
   type = list(string)
 }
 
-variable "load_balancer_internal" {}
+##############################################################
+################### LOAD BALANCER VARIABLES ##################
+##############################################################
 
-variable "load_balancer_type" {}
+variable "load_balancer_internal" {
+  type = bool
+}
 
-variable "nodes_ami" {}
+variable "load_balancer_type" {
+  type = string
+}
 
-variable "node_instance_type" {}
+##############################################################
+####################### ECS VARIABLES ########################
+##############################################################
 
-variable "node_volume_size" {}
+variable "nodes_ami" {
+  type = string
+}
 
-variable "node_volume_type" {}
+variable "node_instance_type" {
+  type = string
+}
 
-variable "cluster_ondemand_min" {}
+variable "node_volume_size" {
+  type = number
+}
 
-variable "cluster_ondemand_max" {}
+variable "node_volume_type" {
+  type = string
+}
 
-variable "cluster_ondemand_desired" {}
+variable "cluster_ondemand_min" {
+  type = number
+}
 
-variable "cluster_spot_min" {}
+variable "cluster_ondemand_max" {
+  type = number
+}
 
-variable "cluster_spot_max" {}
+variable "cluster_ondemand_desired" {
+  type = number
+}
 
-variable "cluster_spot_desired" {}
+variable "cluster_spot_min" {
+  type = number
+}
+
+variable "cluster_spot_max" {
+  type = number
+}
+
+variable "cluster_spot_desired" {
+  type = number
+}
