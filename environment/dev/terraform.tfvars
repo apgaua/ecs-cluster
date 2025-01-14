@@ -2,15 +2,25 @@ region       = "us-east-1"
 project_name = "lab-ecs-cluster"
 
 ## Parametros SSM VPC
-ssm_private_subnet_1 = "/containers-vpc/vpc/containers-vpc-private-subnet-1a"
-ssm_private_subnet_2 = "/containers-vpc/vpc/containers-vpc-private-subnet-1b"
-ssm_private_subnet_3 = "/containers-vpc/vpc/containers-vpc-private-subnet-1c"
+privatesubnets = [
+  "/ECS/subnets/private/us-east-1a/ecs-private-subnet-1a",
+  "/ECS/subnets/private/us-east-1a/ecs-private-subnet-1b",
+  "/ECS/subnets/private/us-east-1a/ecs-private-subnet-1c"
+]
 
-ssm_public_subnet_1 = "/containers-vpc/vpc/containers-vpc-public-subnet-1a"
-ssm_public_subnet_2 = "/containers-vpc/vpc/containers-vpc-public-subnet-1b"
-ssm_public_subnet_3 = "/containers-vpc/vpc/containers-vpc-public-subnet-1c"
+publicsubnets = [
+  "/ECS/subnets/public/us-east-1a/ecs-public-subnet-1a",
+  "/ECS/subnets/public/us-east-1a/ecs-public-subnet-1b",
+  "/ECS/subnets/public/us-east-1a/ecs-public-subnet-1c"
+]
 
-ssm_vpc_id = "/containers-vpc/vpc/vpc_id"
+databasesubnets = [
+  "/ECS/subnets/database/us-east-1a/ecs-public-subnet-1a",
+  "/ECS/subnets/database/us-east-1a/ecs-public-subnet-1b",
+  "/ECS/subnets/database/us-east-1a/ecs-public-subnet-1c"
+]
+
+ssm_vpc_id = "/ecs-vpc/vpc/vpc_id"
 
 ## LB
 load_balancer_internal = false

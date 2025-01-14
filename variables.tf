@@ -1,12 +1,22 @@
-variable "region" {}
-variable "project_name" {}
-variable "ssm_vpc_id" {}
-variable "ssm_public_subnet_1" {}
-variable "ssm_public_subnet_2" {}
-variable "ssm_public_subnet_3" {}
-variable "ssm_private_subnet_1" {}
-variable "ssm_private_subnet_2" {}
-variable "ssm_private_subnet_3" {}
+variable "region" {
+  type = string
+}
+variable "project_name" {
+  type = string
+}
+variable "ssm_vpc_id" {
+  type = string
+}
+
+variable "privatesubnets" {
+  type = list(string)
+}
+variable "publicsubnets" {
+  type = list(string)
+}
+variable "databasesubnets" {
+  type = list(string)
+}
 
 variable "load_balancer_internal" {}
 
