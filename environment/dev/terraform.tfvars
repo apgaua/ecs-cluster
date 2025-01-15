@@ -37,10 +37,11 @@ node_instance_type = "t4g.micro"
 node_volume_size   = "40"
 node_volume_type   = "gp3"
 
-cluster_ondemand_min     = 2
+cluster_ondemand_min     = 1
 cluster_ondemand_max     = 4
-cluster_ondemand_desired = 3
+cluster_ondemand_desired = 1
 
-cluster_spot_min     = 2
-cluster_spot_max     = 4
-cluster_spot_desired = 3
+cluster_spot_min      = 2
+cluster_spot_max      = 4
+cluster_spot_desired  = 3
+cluster_spot_maxprice = "0.003"

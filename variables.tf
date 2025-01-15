@@ -1,9 +1,11 @@
 variable "region" {
   type = string
 }
+
 variable "project_name" {
   type = string
 }
+
 variable "ssm_vpc_id" {
   type = string
 }
@@ -11,9 +13,11 @@ variable "ssm_vpc_id" {
 variable "privatesubnets" {
   type = list(string)
 }
+
 variable "publicsubnets" {
   type = list(string)
 }
+
 variable "databasesubnets" {
   type = list(string)
 }
@@ -72,4 +76,8 @@ variable "cluster_spot_max" {
 
 variable "cluster_spot_desired" {
   type = number
+}
+
+variable "cluster_spot_maxprice" {
+  type = string
 }

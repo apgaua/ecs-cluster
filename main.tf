@@ -44,7 +44,8 @@ module "ecs_ec2" {
   cluster_ondemand_max     = var.cluster_ondemand_max
   cluster_ondemand_desired = var.cluster_ondemand_desired
 
-  cluster_spot_min     = var.cluster_spot_min
-  cluster_spot_max     = var.cluster_spot_max
-  cluster_spot_desired = var.cluster_spot_desired
+  cluster_spot_min      = var.cluster_spot_min
+  cluster_spot_max      = var.cluster_spot_max
+  cluster_spot_desired  = var.cluster_spot_desired
+  cluster_spot_maxprice = var.cluster_spot_maxprice
 }
